@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password App</title>
     <script src="https://kit.fontawesome.com/9d4449454b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+	<meta name="description" content="An app to generate, validate and test strength of your passswords like pro.">
+	<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD/PAAA/94AAP//AAD//wAA//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAA//8AAP//AAD//wAA//8AAP//AAD//wAA/0MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/wQAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL+//wEAAP//AAD//wAA//8AAP8BAAAAAAAA//8AAP//AAD//wAA/8oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACXl/9XAAD//wAA//8AAP/NAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl5f/JgAA//8AAP//AAD//wAAAAAAAAAAAAD/mwAA//8AAP//AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//5eX/xgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/ugAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+FAAD//wAA//8AAP//AAD//wAA/+cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AADj/wAA4/8AAOP/AADkPwAA6B8AAOAPAADxhwAA8ccAAPGHAADwDwAA8A8AAPgfAAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
 </head>
 <body>
 
@@ -29,9 +31,9 @@
 
     <div class="pop-up">
         <ul class="pop-list">
-            <li>Password Generator</li>
-            <li>Strength Checker</li>
-            <li>Password Validator</li>
+            <li class="tab11">Password Generator</li>
+            <li class="tab22">Strength Checker</li>
+            <li class="tab33">Password Validator</li>
         </ul>
     </div>
     
@@ -80,20 +82,78 @@
 
 
 
-<div class="container1">
-   <h1>hello</h1> 
+<div class="container1 visible1">
+  <div class="container11">
+         <header>Password Strength Indicator <br/></header>
+		 <h3 class="pass-msg">Enter your password to check strength</h3>
+         <form action="#">
+            <div class="field">
+               <input onkeyup="trigger()" type="password" placeholder="Type password" class="strength">
+               <span class="showBtn">SHOW</span>
+            </div>
+            <div class="indicator">
+               <span class="weak"></span>
+               <span class="medium"></span>
+               <span class="strong"></span>
+            </div>
+            <div class="text"></div>
+         </form>
+      </div>
+	  <div class="warning">
+		  <h3 class="warning-msg">** This page do not steal or look onto your passwords as it is only a client side app with no backend.</h3>
+	  </div>
 </div>
-<div class="container2">
-   <h1>hello   jjiii</h1> 
+
+
+<div class="container2 visible1">
+   
+     <div class="valid-container">
+	<div class="valid-header">
+		<h2>Create Account</h2>
+	</div>
+	<form id="form" class="form">
+		<div class="form-control">
+			<label for="username">Username</label>
+			<input type="text" placeholder="HarryPotter" id="username" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Email</label>
+			<input type="email" placeholder="harry@hogwarts.com" id="email" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Password</label>
+			<input type="password" placeholder="Password" id="password"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Reconfirm Password</label>
+			<input type="password" placeholder="Re-enter Password" id="password2"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<button>Submit</button>
+	</form>
+</div>
+
 </div>
 
 
 
-<!-- SOCIAL PANEL HTML -->
-
-<div class="floating-text">
-	Part of <a href="https://florin-pop.com/blog/2019/09/100-days-100-projects" target="_blank">#100Days100Projects</a>
-</div>
+<!-- Foot -->
+<div class="social-links">
+            <a href="https://github.com/SudhansuuRanjan"><h2>GitHub</h2></a>
+            <a href="https://Twitter.com/Sudhanss_u"><h2>Twitter</h2></a>
+        </div>
+        <h2 class="foot-text"> <i class="fas fa-code"></i> Made by Sudhanshu with 💖. <i class="fas fa-code"></i></h2>
 
 <script src="app.js"></script>
 </body>
